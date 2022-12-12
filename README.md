@@ -1,1 +1,3 @@
-# Movie_Title_Game-Rasa
+# Movie_Title_Game System for Cosc483
+
+##Requirements
