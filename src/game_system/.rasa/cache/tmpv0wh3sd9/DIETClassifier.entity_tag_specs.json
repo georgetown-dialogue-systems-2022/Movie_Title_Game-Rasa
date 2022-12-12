@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-difficulty",
+      "2": "I-difficulty",
+      "3": "L-difficulty",
+      "4": "U-difficulty",
+      "5": "B-genre",
+      "6": "I-genre",
+      "7": "L-genre",
+      "8": "U-genre",
+      "9": "B-hint",
+      "10": "I-hint",
+      "11": "L-hint",
+      "12": "U-hint",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-difficulty": 1,
+      "I-difficulty": 2,
+      "L-difficulty": 3,
+      "U-difficulty": 4,
+      "B-genre": 5,
+      "I-genre": 6,
+      "L-genre": 7,
+      "U-genre": 8,
+      "B-hint": 9,
+      "I-hint": 10,
+      "L-hint": 11,
+      "U-hint": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

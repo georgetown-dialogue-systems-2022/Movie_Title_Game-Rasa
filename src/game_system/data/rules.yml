@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: give the hint
+  steps:
+  - intent: request_hint
+  - action: action_hint
+  - action: action_hint_counter
+
+
+- rule: guess name
+  steps:
+  - intent: guess
+  - action: action_guess
+  - action: action_guess_counter
+
+#
+- rule: start game and choose genre and difficluty
+  steps:
+  - intent: start_game
+  - action: utter_rule
+  - action: genre_name_form
+  - active_loop: genre_name_form
+
+- rule: form finish
+  condition:
+  - active_loop: genre_name_form
+  steps:
+  - action: genre_name_form
+  - active_loop: null
+
+
+- rule: ask for evaluation
+  steps:
+  - intent: give_eval
+#  - action: utter_eval
+  - action: action_record_eval

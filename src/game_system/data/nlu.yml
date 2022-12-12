@@ -1,0 +1,154 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: start_game
+  examples: |
+    - Please start the game
+    - Start the game
+    - Start
+
+- intent: provide_genre
+  examples: |
+    - I'd like [War](genre) movie
+    - I want to guess a [Action](genre) movie
+    - [Animation](genre)
+    - I'd like the [Sport](genre)
+    - I like [Biography](genre)
+    - I want to guess a [western](genre) movie
+    - [Thriller](genre)
+    - I like [Adventure](genre) movie!
+    - Can you give me a [Romance](genre) movie
+    - [Reality-tv](genre) thank you!
+    - Show me a [Mystery](genre) movie
+    - Haha I like [Horror](genre) movie
+    - Show me a [Film-noir](genre) riddle
+    - [Musical](genre) thanks!
+    - [Comedy](genre)
+    - I want to challenge a [Fantasy](genre)!
+    - I'm good at [History](genre)
+    - I'd want a [Sci-fi](genre) movie
+    - [Music](genre)
+    - [Crime](genre) movies are my favorite!
+    - [Drama](genre)
+    - I like the [Family](genre) movie!
+
+- intent: request_hint
+  examples: |
+    - I want a hint
+    - Could you tell me the release [year](hint)?
+    - I'd like to know the movie [year](hint)
+    - Can you give me the [director](hint) information?
+    - I want to know the [actors](hint) details.
+    - Can you give a hint about [actor](hint)?
+    - Give me a hint about [description](hint)
+    - Hint about [description](hint)
+    - Hint about [keyword](hint)
+    - Give me a hint about [keywords](hint)
+
+- intent: guess
+  examples: |
+    - The movie is: The Matrix
+    - The movie is: The Lord of the Rings: The Return of the King
+    - The movie is: Shichinin no samurai
+
+- intent: select_difficulty
+  examples: |
+    - [Easy](difficulty)
+    - [Hard](difficulty)
+
+- intent: give_eval
+  examples: |
+    - [5](bot_eval) score
+    - [4](bot_eval) score
+    - [3](bot_eval) score
+    - [2](bot_eval) score
+    - [1](bot_eval) score

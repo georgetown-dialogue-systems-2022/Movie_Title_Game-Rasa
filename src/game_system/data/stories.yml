@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: start_game
+  - action: utter_rule
+  - action: genre_name_form
+  - intent: request_hint
+  - action: action_hint
+  - action: action_hint_counter
+  - intent: request_hint
+  - action: action_hint
+  - action: action_hint_counter
+  - intent: request_hint
+  - action: action_hint
+  - action: action_hint_counter
+  - intent: guess
+  - action: action_guess
+  - action: action_guess_counter
+  - intent: guess
+  - action: action_guess
+  - action: action_guess_counter
+  - intent: guess
+  - action: action_guess
+  - action: action_guess_counter
+
+- story: unhappy path
+
+
+

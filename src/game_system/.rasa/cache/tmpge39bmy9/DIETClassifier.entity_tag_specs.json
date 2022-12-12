@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-genre",
+      "2": "I-genre",
+      "3": "L-genre",
+      "4": "U-genre",
+      "5": "B-hint",
+      "6": "I-hint",
+      "7": "L-hint",
+      "8": "U-hint",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-genre": 1,
+      "I-genre": 2,
+      "L-genre": 3,
+      "U-genre": 4,
+      "B-hint": 5,
+      "I-hint": 6,
+      "L-hint": 7,
+      "U-hint": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

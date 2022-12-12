@@ -1,0 +1,34 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"start_game\"}}]": "utter_rule",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"start_game\"}}, {\"prev_action\": {\"action_name\": \"utter_rule\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"start_game\"}}]": "genre_name_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"start_game\"}}, {\"prev_action\": {\"action_name\": \"utter_rule\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"start_game\"}}, {\"active_loop\": {\"name\": \"genre_name_form\"}, \"prev_action\": {\"action_name\": \"genre_name_form\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"start_game\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"request_hint\"}}]": "action_hint",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"request_hint\"}}, {\"prev_action\": {\"action_name\": \"action_hint\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"request_hint\"}}]": "action_hint_counter",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"request_hint\"}}, {\"prev_action\": {\"action_name\": \"action_hint\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"request_hint\"}}, {\"prev_action\": {\"action_name\": \"action_hint_counter\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"request_hint\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"guess\"}}]": "action_guess",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"guess\"}}, {\"prev_action\": {\"action_name\": \"action_guess\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"guess\"}}]": "action_guess_counter",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"guess\"}}, {\"prev_action\": {\"action_name\": \"action_guess\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"guess\"}}, {\"prev_action\": {\"action_name\": \"action_guess_counter\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"guess\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"genre_name_form\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"give_eval\"}}]": "utter_eval",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"give_eval\"}}, {\"prev_action\": {\"action_name\": \"utter_eval\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"give_eval\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "genre_name_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"utter_rule\"}}, {\"active_loop\": {\"name\": \"genre_name_form\"}, \"prev_action\": {\"action_name\": \"genre_name_form\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"start_game\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "handling active loops and forms - genre_name_form",
+      "handling active loops and forms - genre_name_form - action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"give_eval\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"give_eval\"}}, {\"prev_action\": {\"action_name\": \"utter_eval\"}, \"slots\": {\"guesscount\": [1.0, 0.0], \"hintcount\": [1.0, 0.0]}, \"user\": {\"intent\": \"give_eval\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

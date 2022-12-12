@@ -1,0 +1,141 @@
+version: '3.1'
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - start_game
+  - provide_genre
+  - guess
+  - request_hint
+  - select_difficulty
+  - give_eval
+
+
+entities:
+- genre
+- hint
+- difficulty
+- bot_eval
+
+slots:
+  genre:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: genre
+  name:
+    type: text
+    mappings:
+    - type: custom
+
+  hint:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: hint
+
+  bot_eval:
+    type: float
+    initial_value: 0
+    mappings:
+      - type: from_entity
+        entity: bot_eval
+# two counters
+  guesscount:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+      action: action_guess_counter
+  hintcount:
+    type: float
+    initial_value: 0
+    mappings:
+      - type: custom
+        action: action_hint_counter
+
+ # difficulty class
+  difficulty:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: difficulty
+
+forms:
+  genre_name_form:
+    required_slots:
+    - difficulty
+    - genre
+
+
+responses:
+  utter_ask_difficulty:
+  - text: Let's select a difficulty level!
+    buttons:
+      - title: Easy
+        payload: /select_difficulty{{"difficulty":"easy"}}
+      - title: Hard
+        payload: /select_difficulty{{"difficulty":"hard"}}
+  ####
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "The gamebot supports various movie name guessing. You can reply 'start' for game"
+
+  utter_rule:
+  - text: |
+      Here are the game rules: You have overall three times to guess the name.
+      - You can request a specific or random hint. (We have year, director, actors and description)
+      - The guessing format should be: The movie is: {your answer}
+      - When the chance runs out, the game ends.
+      - Hope you enjoy the game!
+
+  utter_ask_genre:
+  - text: |
+      Which genre do you want to guess?
+      - They are War/ Biography/ Western/ Thriller/ Adventure/
+      - Romance/ Reality-TV/ Mystery/ Horror/ Musical/ Sport/
+      - Animation/ Action/ Comedy/ Fantasy/ History/ Sci-Fi/
+      - Crime/ Music/ Drama/ Family"
+
+  utter_end:
+  - text: "You have no chance to guess. The game ends!"
+
+  utter_confirm:
+  - text: "You are correct!"
+
+  utter_eval:
+  - text: "Thanks!"
+  - text: "Thanks for your evaluation! You can send more detailed reviews on 'Help us to do better' page. "
+
+actions:
+
+- validate_genre_name_form
+- action_hint
+- action_guess
+- action_guess_counter
+- action_hint_counter
+- action_session_start
+- action_record_eval
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
