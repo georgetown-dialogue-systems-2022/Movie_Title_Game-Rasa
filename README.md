@@ -20,7 +20,7 @@ If you want to run your own Rasa model, edit the configuration following the for
 ```python
 rasa train
 ```
-Now you can enter the coomands above to start the system!
+Now you can enter the comands above to start the system!
 
 ### Web UI
 All our web Ui is edited by [*chatbot-widget*](https://github.com/JiteshGaikwad/Chatbot-Widget). After running the system, just double click the [*index.html*](https://github.com/georgetown-dialogue-systems-2022/Movie_Title_Game-Rasa/blob/main/src/game_system/index.html), the web server would show in your browser.
