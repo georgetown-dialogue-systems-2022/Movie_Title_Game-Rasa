@@ -25,3 +25,11 @@ Now you can enter the comands above to start the system!
 ### Web UI
 All our web Ui is edited by [*chatbot-widget*](https://github.com/JiteshGaikwad/Chatbot-Widget). After running the system, just double click the [*index.html*](https://github.com/georgetown-dialogue-systems-2022/Movie_Title_Game-Rasa/blob/main/src/game_system/index.html), the web server would show in your browser.
 
+
+### Contact us
+The latest update date: Dec. 12, 2022
+
+For any questions or suggustions, please contact: zh188@georgetown.edu and xs176@georgetown.edu
+
+Hope you enjoy this game! 😊
+
