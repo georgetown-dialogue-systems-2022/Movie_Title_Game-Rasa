@@ -1,6 +1,6 @@
 # Movie_Title_Game System for Cosc483
 A final project for Cosc483 providing a movie title guessing game.<br>
-You can see the details in the final report.
+You can see the details in the [*final report*](https://github.com/georgetown-dialogue-systems-2022/Movie_Title_Game-Rasa/blob/main/final_report.pdf).
 
 ## Setup
 Python 3.7+ is recommended. The file requirements.txt includes all necessary libraries working for this project.<br>
